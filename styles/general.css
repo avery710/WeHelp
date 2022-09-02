@@ -1,4 +1,12 @@
+p {
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Noto Sans TC', sans-serif;
+}
+
 body {
-    background-image: url('background.jpg');
-    background-position: center;
+    background-image: url("../pic/bg1-01.jpg");
+    background-position: center top;
+    background-repeat: repeat-y;
+    background-size: 1660px;
+    height: 2000px;
 }
