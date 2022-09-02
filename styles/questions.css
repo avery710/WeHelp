@@ -1,0 +1,29 @@
+.question-whole {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 80px;
+}
+
+.left-section,
+.right-section {
+    width: 575px;
+    background-color: blue;
+    display: flex;
+    flex-direction: column;
+}
+
+.left-section {
+    align-items: flex-start;
+
+}
+
+.right-section {
+    align-items: flex-end;
+}
+
+.Q-section {
+    width: 540px;
+    background-color: aquamarine;
+    margin-bottom: 30px;
+}
