@@ -8,22 +8,81 @@
 .left-section,
 .right-section {
     width: 575px;
-    background-color: blue;
     display: flex;
     flex-direction: column;
 }
 
 .left-section {
     align-items: flex-start;
-
 }
 
 .right-section {
     align-items: flex-end;
 }
 
-.Q-section {
-    width: 540px;
-    background-color: aquamarine;
+.Q1-section,
+.Q2-section {
+    width: 550px;
     margin-bottom: 30px;
+    position: relative;
+}
+
+.Q1-section {
+    height: 358px;
+}
+
+.Q2-section {
+    background-color: aqua;
+    height: 350px;
+}
+
+
+
+.question-bar {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    width: 530px;
+    border-radius: 10px;
+    z-index: 10;
+
+    position: absolute;
+}
+
+.Q1-section .question-bar {
+    border: 2px solid black;
+    background-color: rgb(0, 255, 0);
+}
+
+.Q2-section .question-bar {
+    border: 2px solid black;
+    background-color: rgb(224, 224, 224);
+
+}
+
+.Q4-section {
+    background-color: blue;
+}
+
+.digital-num {
+    height: 30px;
+    margin-left: 30px;
+}
+
+.question {
+    margin-left: 25px;
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.answer {
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 65px 30px 20px 30px;
+    background-color: white;
+
+    position: absolute;
+    top: 30px;
+    left: 20px;
 }
