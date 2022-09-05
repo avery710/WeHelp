@@ -1,0 +1,21 @@
+.question-whole {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 75px;
+}
+
+#left-section,
+#right-section {
+    width: 575px;
+    display: flex;
+    flex-direction: column;
+}
+
+#left-section {
+    align-items: flex-start;
+}
+
+#right-section {
+    align-items: flex-end;
+}
