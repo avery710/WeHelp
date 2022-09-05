@@ -2,75 +2,74 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 80px;
+    margin-top: 75px;
 }
 
-.left-section,
-.right-section {
+#left-section,
+#right-section {
     width: 575px;
     display: flex;
     flex-direction: column;
 }
 
-.left-section {
+#left-section {
     align-items: flex-start;
 }
 
-.right-section {
+#right-section {
     align-items: flex-end;
 }
 
-.Q1-section,
-.Q2-section {
-    width: 550px;
+#Q1-section {
+    width: 545px;
     margin-bottom: 30px;
     position: relative;
+    background-color: aqua;
 }
 
-.Q1-section {
+#Q1-section {
     height: 358px;
 }
 
-.Q2-section {
-    background-color: aqua;
-    height: 350px;
-}
-
-
-
-.question-bar {
+.button {
     display: flex;
     justify-content: left;
     align-items: center;
     width: 530px;
     border-radius: 10px;
     z-index: 10;
+    cursor: pointer;
 
     position: absolute;
 }
 
-.Q1-section .question-bar {
+.digital-num {
+    height: 30px;
+    margin-right: 25px;
+    margin-left: 20px;
+}
+
+.button::after {
+    content: "+";
+    font-size: 30px;
+    font-weight: 700;
+    position: absolute;
+    right: 20px;
+
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in-out;
+}
+
+.button.active::after {
+    transform: rotate(45deg);
+}
+
+#Q1-section .button {
     border: 2px solid black;
     background-color: rgb(0, 255, 0);
 }
 
-.Q2-section .question-bar {
-    border: 2px solid black;
-    background-color: rgb(224, 224, 224);
-
-}
-
-.Q4-section {
-    background-color: blue;
-}
-
-.digital-num {
-    height: 30px;
-    margin-left: 30px;
-}
-
 .question {
-    margin-left: 25px;
     font-size: 22px;
     font-weight: 700;
     letter-spacing: 1px;
@@ -79,10 +78,18 @@
 .answer {
     border: 2px solid black;
     border-radius: 10px;
-    padding: 65px 30px 20px 30px;
+    padding: 65px 30px 9px 30px;
     background-color: white;
 
     position: absolute;
-    top: 30px;
+    top: 20px;
     left: 20px;
+
+    max-height: 0px;
+    overflow: hidden;
+}
+
+.open {
+    max-height: 400px;
+    padding-bottom: 20px;
 }
