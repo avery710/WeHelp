@@ -5,7 +5,7 @@ sections.forEach(section => {
     const answer = btn.nextElementSibling;
 
     section.style.minHeight = btn.offsetHeight + 20 + 'px';
-    answer.style.paddingTop = btn.offsetHeight - 5 + 'px';
+    answer.style.paddingTop = btn.offsetHeight - 10 + 'px';
     
     btn.addEventListener('click', (e) => {
         btn.classList.toggle("active");
