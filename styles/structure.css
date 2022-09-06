@@ -10,6 +10,8 @@
     width: 575px;
     display: flex;
     flex-direction: column;
+    height: 1000px;
+    flex-shrink: 0;
 }
 
 #left-section {
@@ -17,6 +19,5 @@
 }
 
 #right-section {
-    align-items: flex-start;
-    background-color: aquamarine;
+    align-items: flex-end;
 }
