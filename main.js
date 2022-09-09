@@ -20,3 +20,9 @@ sections.forEach(section => {
         }
     });
 });
+
+window.addEventListener("keydown", function(e) {
+    if (e.code == "Space" && e.target == document.body){
+        e.preventDefault();
+    }
+});

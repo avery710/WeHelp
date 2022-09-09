@@ -1,10 +1,12 @@
-import { updateGround, setupGround } from "./ground.js";
-import { updateDino, setupDino } from "./dino.js";
+import { updateGround, setupGround } from "../game/ground.js";
+import { updateDino, setupDino, getDinoRect, setDinoLose } from "../game/dino.js";
+import { updateCactus, setupCactus, getCactusRects } from "../game/cactus.js";
+
 
 const SPEED_SCALE_INCREASE = .00001
 
 const scoreElem = document.querySelector("[data-score]");
-const startScreen = document.querySelector("[data-start-screen]");
+const startScreenElem = document.querySelector("[data-start-screen]");
 
 document.addEventListener("keydown", handleStart, {once: true});
 
@@ -24,8 +26,13 @@ function update(time) {
 
     updateGround(delta, speedScale);
     updateDino(delta, speedScale);
+    updateCactus(delta, speedScale);
     updateSpeedScale(delta);
     updateScore(delta);
+
+    if (checkLose()){
+        return handleLose(); 
+    }
 
     console.log(`${speedScale}, ${delta}`);
 
@@ -38,6 +45,16 @@ function updateScore(delta) {
     scoreElem.textContent = Math.floor(score);
 }
 
+function checkLose(){
+    const dinoRect = getDinoRect();
+    return getCactusRects().some(rect => isCollision(rect, dinoRect));
+}
+
+function isCollision(cactus, dino){
+    return cactus.left < dino.right && cactus.right > dino.left
+    && cactus.top < dino.bottom && cactus.bottom > dino.top;
+}
+
 function updateSpeedScale(delta){
     speedScale += delta * SPEED_SCALE_INCREASE;
 }
@@ -48,10 +65,20 @@ function handleStart(){
     speedScale = 1;
     score = 0;
 
-    startScreen.classList.add("hide");
+    startScreenElem.classList.add("hide");
 
     setupGround();
     setupDino();
+    setupCactus();
 
     window.requestAnimationFrame(update); // active the update loop
+}
+
+function handleLose(){
+    // change the img of dino
+    setDinoLose();
+    setTimeout(() => {
+        document.addEventListener("keydown", handleStart, {once: true});
+        startScreenElem.classList.remove("hide");
+    }, 200);
 }

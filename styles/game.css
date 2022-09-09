@@ -58,8 +58,9 @@
 }
 
 .cactus {
+    --left: 0;
     position: absolute;
-    left: calc(var(--left) * 1%);
     height: 80px;
     bottom: 0;
+    left: calc(var(--left) * 1%);
 }

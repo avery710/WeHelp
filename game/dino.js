@@ -1,9 +1,9 @@
-import { incrementCustomProperty, getCustomProperty, setCustomProperty } from "./updateCustomProperty";
+import { incrementCustomProperty, getCustomProperty, setCustomProperty } from "../game/updateCustomProperty.js";
 
 const dinoElem = document.querySelector("[data-dino]");
 
 const JUMP_SPEED = .45
-const GRAVITY = .011
+const GRAVITY = .0018
 const DINO_FRAME_COUNT = 2
 const FRAME_TIME = 100
 
@@ -25,6 +25,14 @@ export function setupDino(){
 export function updateDino(delta, speedScale){
     handleRun(delta, speedScale);
     handleJump(delta);
+}
+
+export function getDinoRect(){
+    return dinoElem.getBoundingClientRect();
+}
+
+export function setDinoLose(){
+    dinoElem.src = "../game-image/dino-lose.png";
 }
 
 function handleRun(delta, speedScale){
