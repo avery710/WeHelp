@@ -32,7 +32,7 @@ export function getDinoRect(){
 }
 
 export function setDinoLose(){
-    dinoElem.src = "game-image/dino-lose.png";
+    dinoElem.src = "./game-image/dino-lose.png";
 }
 
 function handleRun(delta, speedScale){
