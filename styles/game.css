@@ -61,6 +61,6 @@
     --left: 0;
     position: absolute;
     height: 80px;
-    bottom: 0;
+    bottom: 3px;
     left: calc(var(--left) * 1%);
 }
