@@ -43,7 +43,7 @@ export function getCactusRects(){
 function createCactus(){
     const cactus = document.createElement("img");
     cactus.dataset.cactus = true; // [data-cactus]
-    cactus.src = "./game-image/cactus.png";
+    cactus.src = "game-image/cactus.png";
     cactus.classList.add("cactus");
     setCustomProperty(cactus, "--left", 100);
 
