@@ -51,8 +51,8 @@ function checkLose(){
 }
 
 function isCollision(cactus, dino){
-    return cactus.left + 5 < dino.right && cactus.right - 5 > dino.left
-    && cactus.top - 5 < dino.bottom && cactus.bottom > dino.top;
+    return cactus.left + 10 < dino.right && cactus.right - 10 > dino.left
+    && cactus.top - 10 < dino.bottom && cactus.bottom > dino.top;
 }
 
 function updateSpeedScale(delta){
