@@ -10,15 +10,29 @@
         <link rel="stylesheet" href="styles/title.css">
         <link rel="stylesheet" href="styles/structure.css">
         <link rel="stylesheet" href="styles/questions.css">
+        <link rel="stylesheet" href="styles/game.css">
 
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&family=Noto+Sans+TC:wght@400;500;700&family=Press+Start+2P&display=swap" rel="stylesheet">
+        
+        <script src="game.js" type="module"></script>
     </head>
+
     <body>
         <header class="wehelp-title">
             <img class="wehelp-digital-pic" src="digital-font/new wehlp-02.png">
         </header>
+
+        <div class="game">
+            <div class="world">
+                <div class="score">0</div>
+                <div class="start-screen">press any key to start</div>
+                <img src="game-image/ground.png" class="ground">
+                <img src="game-image/ground.png" class="ground">
+                <img src="game-image/dino-stationary.png" class="dino">
+            </div>
+        </div>
 
         <div class="question-whole">
             <div id="left-section">
@@ -154,6 +168,5 @@
         </div>
 
         <script src="main.js"></script>
-
     </body>
 </html>

@@ -1,0 +1,65 @@
+.game {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.world {
+    box-sizing: border-box;
+    height: 250px;
+    font-family: 'Press Start 2P', cursive;
+    user-select: none;
+
+    max-width: 1150px;
+    overflow: hidden;
+
+    background-color: rgb(220, 220, 220);
+    border: 2px solid black;
+    border-radius: 10px;
+
+    position: relative;
+    width: 100%;
+}
+
+.score {
+    position: absolute;
+    font-size: 18px;
+    right: 15px;
+    top: 15px;
+}
+
+.start-screen {
+    position: absolute;
+    font-size: 18px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.hide {
+    display: none;
+}
+
+.ground {
+    --left: 0;
+    position: absolute;
+    width: 300%;
+    bottom: 10px;
+    left: calc(var(--left) * 1%);
+}
+
+.dino {
+    --bottom: 0;
+    position: absolute;
+    left: 5px;
+    height: 80px;
+    bottom: calc(var(--bottom) * 1%);
+}
+
+.cactus {
+    position: absolute;
+    left: calc(var(--left) * 1%);
+    height: 80px;
+    bottom: 0;
+}
