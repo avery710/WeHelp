@@ -10,7 +10,7 @@
     width: 575px;
     display: flex;
     flex-direction: column;
-    height: 700px;
+    height: 500px;
     flex-shrink: 0;
 }
 
